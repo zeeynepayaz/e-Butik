@@ -1,0 +1,29 @@
+[
+  {
+    "outputFileName": "wwwroot/css/bundle.css",
+    "inputFiles": [
+      "wwwroot/butik/style.css",
+      "wwwroot/butik/styles/lunar.css",
+      "wwwroot/butik/custom.css",
+      "wwwroot/butik/demo/demo.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/bundle.js",
+    "inputFiles": [
+      "wwwroot/butik/vendor/jquery/jquery.min.js",
+      "wwwroot/butik/vendor/bootstrap/js/bootstrap.min.js",
+      "wwwroot/butik/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js",
+      "wwwroot/butik/vendor/wow/wow.min.js",
+      "wwwroot/butik/vendor/imagesloaded/imagesloaded.pkgd.min.js",
+      "wwwroot/butik/vendor/SmoothScroll/SmoothScroll.min.js",
+      "wwwroot/butik/vendor/waypoints/waypoints.min.js",
+      "wwwroot/butik/vendor/counterup/jquery.counterup.min.js",
+      "wwwroot/butik/vendor/hero-slider/js/modernizr.js",
+      "wwwroot/butik/vendor/hero-slider/js/main.js",
+      "wwwroot/butik/vendor/owl-carousel/owl.carousel.js",
+      "wwwroot/butik/vendor/jquery/jquery.filterizr.js",
+      "wwwroot/butik/edura.js"
+    ]
+  }
+]
