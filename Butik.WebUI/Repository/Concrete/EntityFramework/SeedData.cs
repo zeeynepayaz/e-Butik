@@ -1,6 +1,7 @@
 ﻿using Butik.WebUI.Entity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -46,7 +47,7 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
                     new Product(){ ProductName="Kahverengi Pantolon", Price=140, Image="product22.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Kahverengi Pantolon",DateAdded=DateTime.Now.AddDays(-3)},
                     new Product(){ ProductName="Siyah Kot", Price=150, Image="product23.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Siyah Kot",DateAdded=DateTime.Now.AddDays(-3)},
                     new Product(){ ProductName="Beyaz Pantolon", Price=100, Image="product24.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Beyaz Pantolon",DateAdded=DateTime.Now.AddDays(-3)}
-                  
+
 
 
 
@@ -189,6 +190,11 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
                 context.SaveChanges();
 
             }
+        }
+
+        internal static void CreateIdentityUsers(IServiceProvider applicationServices, IConfiguration configuration)
+        {
+            throw new NotImplementedException();
         }
     }
 }

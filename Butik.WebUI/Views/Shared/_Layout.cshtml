@@ -37,80 +37,24 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                                <ul class="dropdown-menu">
-                                    <li><a asp-action="Index" asp-controller="Home">Homepage 1</a></li>
-                                   
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="404.html">404 Error</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Features</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="typography.html">Typography</a></li>
-                                    <li><a href="grid-system.html">Grid System</a></li>
-                                    <li><a href="elements.html">Elements</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Menu Title</li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">More..</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">3rd level</a></li>
-                                            <li><a href="#">3rd level</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="portfolio-single.html">Single Project</a></li>
-                                    <li><a href="portfolio-2cl.html">2 Columns Portfolio</a></li>
-                                    <li><a href="portfolio-3cl.html">3 Columns Portfolio</a></li>
-                                    <li><a href="portfolio-4cl.html">4 Columns Portfolio</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog-single.html">Single Article</a></li>
-                                    <li><a href="blog-grid-2cl.html">Blog Grid 2 Columns</a></li>
-                                    <li><a href="blog-grid-3cl.html">Blog Grid 3 Columns</a></li>
-                                    <li><a href="blog-list.html">Blog List</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="shop-product.html">Product</a></li>
-                                    <li><a href="shop-product-sidebar-left.html">Product Sidebar Left</a></li>
-                                    <li><a href="shop-product-sidebar-right.html">Product Sidebar Right</a></li>
-                                    <li><a href="shop-catalog.html">Catalog</a></li>
-                                    <li><a href="shop-catalog-sidebar-left.html">Catalog Sidebar Left</a></li>
-                                    <li><a href="shop-catalog-sidebar-right.html">Catalog Sidebar Right</a></li>
-                                    <li><a href="shop-cart.html">Shopping Cart</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="contactus-1.html">Contact Us 1</a></li>
-                                    <li><a href="contactus-2.html">Contact Us 2</a></li>
-                                    <li><a href="contactus-3.html">Contact Us 3</a></li>
-                                    <li><a href="contactus-4.html">Contact Us 4</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-cart.html"><i class="fa fa-shopping-cart fa-fw"></i> Cart (@await Component.InvokeAsync("CartSummary"))</a></li>
+        
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.Name</a>
+                                    <ul class="dropdown-menu">
+                                         <li>Hesabım</li>
+                                         <li><a href="/Account/Logout">Çıkış Yap</a></li>
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <li><a href="/Account/Login">Giriş<i class="fa fa-user-o"></i></a></li>
+                            }
+
+
+                            <li><a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-cart fa-fw"></i> Sepet (@await Component.InvokeAsync("CartSummary"))</a></li>
 
                         </ul>
 
@@ -128,9 +72,8 @@
                 </div>
                 <div class="col-xs-6 text-right breadcrumbs">
                     <ul class="list-inline list-unstyled">
-                        <li><a href="index-2.html">Home</a></li>
-                        <li>/</li>
-                        <li>Shop</li>
+                        <li><a asp-controller="Home" asp-action="Index"><b>Anasayfa</b></a></li>
+                       
                     </ul>
                 </div>
             </div>
@@ -144,10 +87,11 @@
         <section id="footer" style="background-color:#B3187C;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <img src="~/images/Butik-logo.png" alt="Butik">
                         <p></p>
-                        <p>Giyim alanında MODA anlayışını yaratarak kendi markasıyla yurt içi ve yurt dışı pazarlarında edindiği yeri arttırmaktadır. Özgün moda anlayışı, dünya modasını yakından takip etmesi ve uzun zaman diliminin verdiği tecrübeyi müşteri memnuniyeti ile birleştirerek aranılan bir marka haline gelmiştir. <b>Butiğimiz ile modayı yakalayın</b>.</p>
+                        <p>Giyim alanında MODA anlayışını yaratarak kendi markasıyla yurt içi ve yurt dışı pazarlarında edindiği yeri arttırmaktadır. Özgün moda anlayışı, dünya modasını yakından takip etmesi ve uzun zaman diliminin verdiği tecrübeyi müşteri memnuniyeti ile birleştirerek aranılan bir marka haline gelmiştir.</p> 
+                        <p><b>Butiğimiz ile modayı yakalayın</b>.</p>
                         <br>
                         <ul class="list-unstyled list-inline social-icons">
                             <li><a href="https://www.facebook.com/Butikcom-447905382629121/?modal=admin_todo_tour" class="facebook"><i class="fa fa-facebook facebook"></i></a></li>
@@ -156,42 +100,27 @@
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h4>PAGES</h4>
+                        <h4>Sayfalar</h4>
                         <ul class="list-unstyled">
-                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">HOME</a></li>
-                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">ABOUT US</a></li>
-                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">SERVICES</a></li>
-                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">BLOG</a></li>
-                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">STORE</a></li>
-                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PRIVACY POLICY</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a asp-controller="Account" asp-action="Login">Hesabım</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a asp-controller="Cart" asp-action="Index">Sepetim</a></li>
+
+
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h4>CONTACT US</h4>
+                        <h4>İletişim</h4>
                         <p><i class="fa fa-map-pin fa-fw"></i> 35030, Bornova/İZMİR</p>
                         <p><i class="fa fa-phone fa-fw"></i> +(90) 558 123 4565</p>
                         <p><i class="fa fa-envelope fa-fw"></i> zeeynepayaz@gmail.com</p>
                     </div>
-                    <div class="col-md-3">
-                        <h4>NEWSLETTER</h4>
-                        <p>Subscribe to our monthly newsletter and stay updated with the latest news and info.</p>
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email Address" required>
-                                </div>
-                            </div>
-                            <div class="form-group pull-right">
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
+                  
                 </div>
                 <div class="row">
                     <hr>
                     <div class="col-md-12 text-center bottom">
-                        <p>Copyright &copy; Butik 2019</p>
+                        <p>Copyright &copy; 2019 Butik - Tüm Hakları Saklıdır.</p>
                     </div>
                 </div>
             </div>

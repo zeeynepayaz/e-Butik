@@ -17,6 +17,7 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
 
         private IProductRepository _products;
         private ICategoryRepository _categories;
+        private IOrderRepository _orders;
 
         public IProductRepository Products
         {
@@ -32,6 +33,15 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
             {
                 return _categories ?? (_categories = new EfCategoryRepository(dbContext));
             }
+        }
+
+        public IOrderRepository Orders
+        {
+            get
+            {
+                return _orders ?? (_orders = new EfOrderRepository(dbContext));
+            }
+
         }
 
         public void Dispose()

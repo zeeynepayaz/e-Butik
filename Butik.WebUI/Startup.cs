@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Butik.WebUI.Repository.Concrete.EntityFramework;
 using Butik.WebUI.Repository.Abstract;
+using Butik.WebUI.IdentityCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace Butik.WebUI
 {
@@ -26,6 +28,8 @@ namespace Butik.WebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ButikContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationIdentityDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationIdentityDbContext>().AddDefaultTokenProviders();
             services.AddTransient<IProductRepository, EfProductRepository>();
             services.AddTransient<ICategoryRepository, EfCategoryRepository>();
             services.AddTransient<IUnitOfWork, EfUnitOfWork>();
@@ -46,6 +50,7 @@ namespace Butik.WebUI
             app.UseStaticFiles();
             app.UseStatusCodePages();
             app.UseSession();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {
@@ -60,6 +65,7 @@ namespace Butik.WebUI
             });
 
             SeedData.EnsurePopulated(app);
+            SeedIdentity.CreateIdentityUsers(app.ApplicationServices, Configuration).Wait();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Butik.WebUI.Repository.Abstract
 {
-    interface IOrderRepository :IGenericRepository<Order>
+    public interface IOrderRepository :IGenericRepository<Order>
     {
 
     }

@@ -19,7 +19,7 @@
                 <div class="widget">
                     <form class="form-inline">
                         <div class="input-group">
-                            <input type="text" class="form-control input-lg" placeholder="Search...">
+                            <input type="text" class="form-control input-lg" placeholder="Arama...">
                             <span class="input-group-btn">
                                 <button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
                             </span>
@@ -49,7 +49,7 @@
                                 <div id="product-gallery" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
 
                                 <div class="item">
-                                   <img alt="" class="img-responsive" src="/images/products/@Model.Product.Image" />
+                                   <img alt="" class="img-responsive" src="~/images/products/small/@Model.Product.Image" />
                                 </div>
                                     
                                 </div>
@@ -61,7 +61,7 @@
                                     <h2 class="product-title"><b>@Model.Product.ProductName</b></h2>
                                     <p>
                                         <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                        3 Reviews
+                                        3 Yorum
                                     </p>
                                     <p class="product-price">$@Model.Product.Price</p>
                                 </div>
@@ -73,7 +73,7 @@
                                         <input type="hidden" name="ProductId" value="@Model.Product.ProductId" />
                                         <div class="form-group qty">
                                             <div class="input-group">
-                                                <span class="input-group-addon">Qty</span>
+                                                <span class="input-group-addon">Miktar</span>
                                                 <input type="number" size="4" name="quantity" class="form-control" value="1" min="1" step="1">
                                             </div>
                                         </div>
@@ -84,7 +84,7 @@
                                 </div>
 
                                 <p>
-                                    <b>Category:</b>
+                                    <b>Kategorisi:</b>
                                     @foreach (var item in Model.Categories)
                                     {
                                         <a href="#">@item.CategoryName</a>
@@ -100,9 +100,9 @@
 
 
                         <ul class="nav nav-tabs">
-                            <li class=""><a data-toggle="tab" href="#description" aria-expanded="false">Description</a></li>
-                            <li class="active"><a data-toggle="tab" href="#spec" aria-expanded="true">Specifications</a></li>
-                            <li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Reviews (3)</a></li>
+                            <li class=""><a data-toggle="tab" href="#description" aria-expanded="false">Açıklama</a></li>
+                            <li class="active"><a data-toggle="tab" href="#spec" aria-expanded="true">Özellikleri</a></li>
+                            <li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Y (3)</a></li>
                         </ul>
 
 
@@ -181,10 +181,10 @@
                                 </div>
 
                                 <div class="page-header">
-                                    <h4>ADD A <b>REVIEW</b></h4>
+                                    <h4>Yorum Ekle</h4>
                                 </div>
 
-                                <p class="text-muted">You must be logged in to add a review.</p>
+                                <p class="text-muted">Yorum eklemek için giriş yapmış olman gerekir.</p>
 
                                 <form>
                                     <div class="row">
@@ -200,7 +200,7 @@
                                         </div>
 
                                         <div class="form-group col-xs-12 text-right">
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-check fa-fw"></i> SUBMIT REVIEW</button>
+                                            <button type="submit" class="btn btn-primary"><i class="fa fa-check fa-fw"></i>Gönder</button>
                                         </div>
                                     </div>
                                 </form>

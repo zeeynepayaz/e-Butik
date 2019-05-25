@@ -12,5 +12,6 @@ namespace Butik.WebUI.Models
         public List<Image> ProductImages { get; set; }
         public List<ProductAttribute> ProductAttributes { get; set; }
         public List<Category> Categories { get; set; }
+      
     }
 }

@@ -27,6 +27,7 @@ namespace Butik.WebUI.Controllers
         {
             return View(repository.Get(id));
         }
+       
         public IActionResult Create()
         {
             var prd = new Product(){ ProductName ="Yeni Ürün",Price=1000 };
