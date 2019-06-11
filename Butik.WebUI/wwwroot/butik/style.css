@@ -1,4 +1,4 @@
-
+﻿
 /* EDURA - MULTIPURPUSE WEBSITE TEMPLATE - CSS v1.0
 ----------------------------------------------------------
 
@@ -622,7 +622,7 @@ input, textarea, select {
 
 .product-thumb {
     max-width: 80px;
-    height: auto;
+    height: 80px;
 
 }
 

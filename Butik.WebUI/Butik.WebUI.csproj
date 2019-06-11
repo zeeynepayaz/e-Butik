@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\Concrete\Adonet\" />
     <Folder Include="wwwroot\butik\images\" />
   </ItemGroup>
 

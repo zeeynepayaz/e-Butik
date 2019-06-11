@@ -24,29 +24,29 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
                 var products = new[]
                 {
                     new Product(){ ProductName="Desenli tisort", Price=50, Image="product1.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Desenli Tisort",DateAdded=DateTime.Now.AddDays(-10)},
-                    new Product(){ ProductName="Kareli Bluz", Price=200,Image="product2.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Kareli Bluz",DateAdded=DateTime.Now.AddDays(-20)},
-                    new Product(){ ProductName="Kısa etek", Price=100,Image="product3.jpg",IsHome=true,IsApproved=false,IsFeatured=true,Description="Kısa etek",HtmlContent="",DateAdded=DateTime.Now.AddDays(-5)},
-                    new Product(){ ProductName="Yırtmaclı pantolon", Price=500, Image="product4.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Yırtmaclı pantolon",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Kareli Bluz", Price=200,Image="product2.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Kareli Bluz",DateAdded=DateTime.Now.AddDays(-20)},
+                    new Product(){ ProductName="Kısa etek", Price=100,Image="product3.jpg",IsHome=true,IsApproved=false,IsFeatured=false,Description="Kısa etek",HtmlContent="",DateAdded=DateTime.Now.AddDays(-5)},
+                    new Product(){ ProductName="Yırtmaclı pantolon", Price=500, Image="product4.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Yırtmaclı pantolon",DateAdded=DateTime.Now.AddDays(-3)},
                     new Product(){ ProductName="Asimetrik Bluz", Price=60, Image="product5.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Asimetrik Bluz",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Kapsonlu Bluz", Price=50, Image="product6.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Kapsonlu Bluz",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Fırfırlı Bluz", Price=40, Image="product7.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Fırfırlı Bluz",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Kırmızı Bluz", Price=70, Image="product8.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Kırmızı Bluz",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Beyaz Tisort", Price=50, Image="product9.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Beyaz Tisort",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Kapsonlu Bluz", Price=50, Image="product6.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Kapsonlu Bluz",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Fırfırlı Bluz", Price=40, Image="product7.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Fırfırlı Bluz",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Kırmızı Bluz", Price=70, Image="product8.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Kırmızı Bluz",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Beyaz Tisort", Price=50, Image="product9.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Beyaz Tisort",DateAdded=DateTime.Now.AddDays(-3)},
                     new Product(){ ProductName="Cizgili Tisort", Price=40, Image="product10.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Cizgili Tisort",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Metallica Tisort", Price=65, Image="product11.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Metallica Tisort",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Basic Tisort", Price=50, Image="product12.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Basic Tisort",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Metallica Tisort", Price=65, Image="product11.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Metallica Tisort",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Basic Tisort", Price=50, Image="product12.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Basic Tisort",DateAdded=DateTime.Now.AddDays(-3)},
                     new Product(){ ProductName="Kırmızı Elbise", Price=120, Image="product13.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Kırmızı Elbise",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="İp Askılı Elbise", Price=140, Image="product14.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="İp Askılı Elbise",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Pembe Elbise", Price=120, Image="product15.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Pembe Elbise",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Asimetrik Kesim Elbise", Price=160, Image="product16.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Asimetrik Kesim Elbise",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="İp Askılı Elbise", Price=140, Image="product14.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="İp Askılı Elbise",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Pembe Elbise", Price=120, Image="product15.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Pembe Elbise",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Asimetrik Kesim Elbise", Price=160, Image="product16.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Asimetrik Kesim Elbise",DateAdded=DateTime.Now.AddDays(-3)},
                     new Product(){ ProductName="Mini Kot Etek", Price=80, Image="product17.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Mini Kot Etek",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Pileli Etek", Price=100, Image="product18.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Pileli Etek",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Kemerli Etek", Price=120, Image="product19.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Kemerli Etek",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Keten Etek", Price=70, Image="product20.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Keten Etek",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Yırtık Pantolon", Price=120, Image="product21.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Yırtık Pantolon",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Pileli Etek", Price=100, Image="product18.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Pileli Etek",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Kemerli Etek", Price=120, Image="product19.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Kemerli Etek",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Keten Etek", Price=70, Image="product20.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Keten Etek",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Yırtık Pantolon", Price=120, Image="product21.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Yırtık Pantolon",DateAdded=DateTime.Now.AddDays(-3)},
                     new Product(){ ProductName="Kahverengi Pantolon", Price=140, Image="product22.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Kahverengi Pantolon",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Siyah Kot", Price=150, Image="product23.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Siyah Kot",DateAdded=DateTime.Now.AddDays(-3)},
-                    new Product(){ ProductName="Beyaz Pantolon", Price=100, Image="product24.jpg",IsHome=true,IsApproved=true,IsFeatured=true,Description="Beyaz Pantolon",DateAdded=DateTime.Now.AddDays(-3)}
+                    new Product(){ ProductName="Siyah Kot", Price=150, Image="product23.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Siyah Kot",DateAdded=DateTime.Now.AddDays(-3)},
+                    new Product(){ ProductName="Beyaz Pantolon", Price=100, Image="product24.jpg",IsHome=true,IsApproved=true,IsFeatured=false,Description="Beyaz Pantolon",DateAdded=DateTime.Now.AddDays(-3)}
 
 
 
@@ -139,6 +139,7 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
 
                 var attributes = new[]
                 {
+            
                     new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[0]},
                     new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[0]},
                     new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[0]},
@@ -175,14 +176,65 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
                     new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[8]},
                     new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[8]},
 
+                    new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[9]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[9]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[9]},
 
-                
-                  
-                
-              
+                    new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[10]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[10]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[8]},
 
+                    new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[11]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[11]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[11]},
 
+                    new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[12]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[12]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[12]},
 
+                    new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[13]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[13]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[13]},
+
+                     new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[14]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[14]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[14]},
+
+                     new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[15]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[15]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[15]},
+
+                     new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[16]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[16]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[16]},
+
+                     new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[17]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[17]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[17]},
+
+                      new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[18]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[18]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[18]},
+
+                      new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[19]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[19]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[19]},
+
+                      new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[20]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[20]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[20]},
+
+                      new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[21]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[21]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[21]},
+
+                      new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[22]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[22]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[22]},
+
+                      new ProductAttribute(){Attribute="Beden",Value="S M L XL",Product=products[23]},
+                    new ProductAttribute(){Attribute="Manken Boyu",Value="1.70",Product=products[23]},
+                    new ProductAttribute(){Attribute="İade&Değişim",Value="14 gün içinde edilebilir",Product=products[23]}
 
                 };
 

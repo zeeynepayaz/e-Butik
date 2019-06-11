@@ -621,7 +621,7 @@ input, textarea, select {
 
 .product-thumb {
     max-width: 80px;
-    height: auto;
+    height: 80px;
 
 }
 

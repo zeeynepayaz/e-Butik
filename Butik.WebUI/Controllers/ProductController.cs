@@ -12,7 +12,7 @@ namespace Butik.WebUI.Controllers
 {
     public class ProductController : Controller
     {
-        public int PageSize = 2;
+        public int PageSize = 3;
         private IProductRepository repository;
 
         public ProductController(IProductRepository _repository)
@@ -25,6 +25,8 @@ namespace Butik.WebUI.Controllers
         {
             return View();
         }
+
+     
 
         public IActionResult List(string category, int page = 1)
         {

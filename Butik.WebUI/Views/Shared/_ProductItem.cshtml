@@ -7,15 +7,14 @@
             <div class="mask"></div>
             <ul class="list-unstyled list-inline">
                 <li><a asp-controller="Product" asp-action="Details" asp-route-id="@Model.ProductId"><i class="fa fa-link fa-fw"></i></a></li>
-                <li><a href="#"><i class="fa fa-cart-plus fa-fw"></i></a></li>
+               
             </ul>
         </div>
         <div class="product-item-inner">
             <h3 class="product-title">
                 <a asp-controller="Product"
                    asp-action="Details"
-                   asp-route-id="@Model.ProductId">
-                    @Model.ProductName
+                   asp-route-id="@Model.ProductId">@Model.ProductName
                 </a>
             </h3>
             <p class="product-price">$@Model.Price</p>

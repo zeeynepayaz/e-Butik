@@ -22,5 +22,6 @@ namespace Butik.WebUI.Repository.Concrete.EntityFramework
         {
             return ButikContext.Products.OrderByDescending(i => i.ProductId).Take(5).ToList();
         }
+      
     }
 }

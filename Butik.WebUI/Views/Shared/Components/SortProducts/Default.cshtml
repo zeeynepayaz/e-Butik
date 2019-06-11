@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Product>
+<div class="widget">
+
+    @using (Html.BeginForm())
+    {
+
+        <div class="input-group">
+            <input name="SearchString" type="text" class="form-control input-lg" placeholder="Arama..." />
+            <span class="input-group-btn">
+                <button class="btn btn-default btn-lg" type="submit" value="Search"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    }
+
+
+    <table class="table">
+            <tr>
+                <td>
+                    @Html.ActionLink("İsme Göre Sırala", "Index", new { sortOrder = ViewBag.NameSortParm })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.ActionLink("Fiyata Göre Sırala", "Index", new { sortOrder = ViewBag.PriceSortParm })
+                </td>
+            </tr>
+
+        </table>
+
+
+</div>
+

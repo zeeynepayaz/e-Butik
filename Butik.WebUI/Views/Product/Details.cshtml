@@ -15,18 +15,13 @@
             <!-- sidebar start -->
             <div id="sidebar" class="col-md-3">
 
-                <!-- search widget start -->
+                <!-- sort widget start -->
                 <div class="widget">
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <input type="text" class="form-control input-lg" placeholder="Arama...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form>
+
+
+
                 </div>
-                <!-- search widget end -->
+                
                 <!-- categories widget start -->
                 @await Component.InvokeAsync("CategoryMenu")
                 <!-- categories widget end -->
@@ -100,19 +95,14 @@
 
 
                         <ul class="nav nav-tabs">
-                            <li class=""><a data-toggle="tab" href="#description" aria-expanded="false">Açıklama</a></li>
                             <li class="active"><a data-toggle="tab" href="#spec" aria-expanded="true">Özellikleri</a></li>
-                            <li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Y (3)</a></li>
+                            <li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Yorumlar(3)</a></li>
                         </ul>
 
 
                         <div class="tab-content">
 
-                            <!-- description tab start -->
-                            <div id="description" class="tab-pane fade">
-                                @Html.Raw(Model.Product.HtmlContent)
-                            </div>
-                            <!-- description tab end -->
+                           
 
                             <!-- Specifications tab start -->
                             <div id="spec" class="tab-pane fade active in">
@@ -149,8 +139,8 @@
                                         </a>
                                         <div class="media-body">
                                             <p class="pull-right"><small><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></small></p>
-                                            <h4 class="media-heading">John Doe <small>2 days ago</small></h4>
-                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                                            <h4 class="media-heading">Zeynep AYAZ <small>2 days ago</small></h4>
+                                          Tam vaktinde geldi, çok güzel ürün...
                                         </div>
                                     </div>
 
@@ -161,8 +151,8 @@
                                         </a>
                                         <div class="media-body">
                                             <p class="pull-right"><small><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></small></p>
-                                            <h4 class="media-heading">Sarah Smith<small>4 days ago</small></h4>
-                                            Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.
+                                            <h4 class="media-heading">Elif ÇETİNER <small>4 days ago</small></h4>
+                                           Rengi ve kumaşına bayıldım :)
                                         </div>
                                     </div>
 
@@ -173,8 +163,8 @@
                                         </a>
                                         <div class="media-body">
                                             <p class="pull-right"><small><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></small></p>
-                                            <h4 class="media-heading">Jane Doe<small>5 days ago</small></h4>
-                                            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                                            <h4 class="media-heading">Pelinsu Aras <small>5 days ago</small></h4>
+                                            Kendim diksem hala güzel olurdu, hiç beğenmedim.
                                         </div>
                                     </div>
 

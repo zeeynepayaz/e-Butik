@@ -7,22 +7,14 @@
 
     <section id="shop" class="container">
 
-        <div class="row">
+        <div class="row my-flex-card">
+
 
             <!-- sidebar start -->
             <div id="sidebar" class="col-md-3">
+                <!-- sort widget start -->
 
-                <div class="widget">
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <input type="text" class="form-control input-lg" placeholder="Arama...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-
-                    </form>
-                </div>
+                @await Component.InvokeAsync("SortProducts")
 
                 @await Component.InvokeAsync("CategoryMenu")
 
@@ -32,6 +24,8 @@
             </div>
             <!-- sidebar end -->
             <!-- right column start -->
+
+
             <div class="col-md-9">
 
                 <div class="row">
@@ -48,12 +42,10 @@
                         </div>
                     </div>
 
-
                     @foreach (var product in Model)
                     {
                         @Html.Partial("_ProductItem", product)
                     }
-
 
                 </div>
 
@@ -62,10 +54,6 @@
 
         </div>
 
-
-
     </section>
-
-
 
 </section>

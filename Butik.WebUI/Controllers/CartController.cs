@@ -8,6 +8,7 @@ using Butik.WebUI.Models;
 using Butik.WebUI.Infrastructure;
 using Butik.WebUI.Entity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace Butik.WebUI.Controllers
 {

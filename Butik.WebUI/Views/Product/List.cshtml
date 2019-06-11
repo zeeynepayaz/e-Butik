@@ -11,18 +11,7 @@
 
             <!-- sidebar start -->
             <div id="sidebar" class="col-md-3">
-
-                <div class="widget">
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <input type="text" class="form-control input-lg" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-
-                    </form>
-                </div>
+                <!-- sort widget start -->
 
                 @await Component.InvokeAsync("CategoryMenu")
 
@@ -41,17 +30,18 @@
                             <div class="product-results">
                                 <div class="col-xs-8">
                                     <p class="woocommerce-result-count">
-                                        There are @Model.PagingInfo.TotalItems products
+                                         @Model.PagingInfo.TotalItems tane ürün mevcut.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     @foreach (var product in Model.Products)
-                    {
+                     {
                         @Html.Partial("_ProductItem", product)
-                    }
+                     }
 
                 </div>
 
